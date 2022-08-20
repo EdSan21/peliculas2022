@@ -3,6 +3,7 @@ import 'package:peliculas2022/providers/movies_provider.dart';
 import 'package:peliculas2022/screens/details_screen.dart';
 import 'package:peliculas2022/screens/home_screen.dart';
 import 'package:peliculas2022/screens/VeterinariaDoggy_screen.dart';
+import 'package:peliculas2022/screens/listado_screen.dart';
 import 'package:peliculas2022/screens/screens.dart';
 import 'package:provider/provider.dart';
 
@@ -37,7 +38,8 @@ class MyApp extends StatelessWidget {
         routes: {
           'home': (_) => const HomeScreen(),
           'details': (_) => const DetailsScreen(),
-          'veterinaria': (_) => const VeterinariaDoggy()
+          'veterinaria': (_) => const VeterinariaDoggy(),
+          'listadopet': (_) => const List()
         },
         theme: ThemeData.light()
             .copyWith(appBarTheme: const AppBarTheme(color: Colors.cyan)));

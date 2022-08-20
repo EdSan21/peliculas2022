@@ -215,6 +215,13 @@ Widget _inputTipoPet() {
 }
 
 Widget _inputFechaNacimiento() {
+  actions:
+  [
+    IconButton(
+      icon: Icon(Icons.search_outlined),
+      onPressed: () {},
+    )
+  ];
   return TextField(
     textCapitalization: TextCapitalization.words,
     maxLength: 10,
