@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:peliculas2022/providers/movies_provider.dart';
-import 'package:peliculas2022/screens/details_screen.dart';
-import 'package:peliculas2022/screens/home_screen.dart';
-import 'package:peliculas2022/screens/VeterinariaDoggy_screen.dart';
-import 'package:peliculas2022/screens/listado_screen.dart';
+import 'package:peliculas2022/screens/credits_screen.dart';
 import 'package:peliculas2022/screens/screens.dart';
 import 'package:provider/provider.dart';
 
@@ -34,14 +31,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Péliculas App Udeo',
-        initialRoute: 'veterinaria',
+        initialRoute: 'home',
         routes: {
           'home': (_) => const HomeScreen(),
           'details': (_) => const DetailsScreen(),
-          'veterinaria': (_) => const VeterinariaDoggy(),
-          'listadopet': (_) => const List()
+          'credits': (_) => const CreditsScreen()
         },
         theme: ThemeData.light()
-            .copyWith(appBarTheme: const AppBarTheme(color: Colors.cyan)));
+            .copyWith(appBarTheme: const AppBarTheme(color: Colors.indigo)));
   }
 }
