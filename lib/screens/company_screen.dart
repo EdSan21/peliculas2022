@@ -6,27 +6,41 @@ class CompanyScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final CompanyDetails movie =
-        ModalRoute.of(context)!.settings.arguments as CompanyDetails;
-
     return Scaffold(
-      body: CustomScrollView(slivers: <Widget>[_OverView(movie)]),
+      body: _OverView(),
     );
   }
 }
 
 class _OverView extends StatelessWidget {
-  final CompanyDetails movie;
-  _OverView(CompanyDetails this.movie);
+  _OverView();
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
-      child: Text(
-        movie.name,
-        textAlign: TextAlign.justify,
-        style: Theme.of(context).textTheme.subtitle1,
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Companies - TMDB"),
+      ),
+      body: Container(
+        child: ListView(
+          children: <Widget>[
+            ListTile(
+              title: Text("Company 1"),
+            ),
+            ListTile(
+              title: Text("Company 2"),
+            ),
+            ListTile(
+              title: Text("Company 3"),
+            ),
+            ListTile(
+              title: Text("Company 4"),
+            ),
+            ListTile(
+              title: Text("Company 5"),
+            ),
+          ],
+        ),
       ),
     );
   }

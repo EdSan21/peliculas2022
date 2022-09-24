@@ -54,6 +54,16 @@ class MoviesProvider extends ChangeNotifier {
     notifyListeners();
   }
 
+getCompany() async {
+    final jsonData = await this._getJsonData('3/movie/company/15');
+    final nowPlayingResponse = NowPlayingResponse.fromJson(jsonData);
+
+    onDisplayMovies = nowPlayingResponse.results;
+
+    notifyListeners();
+  }
+
+
   getPopularMovies() async {
     _popularPage++;
 
