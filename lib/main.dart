@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:peliculas2022/models/model.dart';
 import 'package:peliculas2022/providers/movies_provider.dart';
 import 'package:peliculas2022/screens/credits_screen.dart';
 import 'package:peliculas2022/screens/screens.dart';
@@ -35,7 +36,8 @@ class MyApp extends StatelessWidget {
         routes: {
           'home': (_) => const HomeScreen(),
           'details': (_) => const DetailsScreen(),
-          'credits': (_) => const CreditsScreen()
+          'credits': (_) => const CreditsScreen(),
+          'company': (_) => const CompanyScreen()
         },
         theme: ThemeData.light()
             .copyWith(appBarTheme: const AppBarTheme(color: Colors.indigo)));
